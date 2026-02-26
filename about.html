@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Kelompok 3</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: linear-gradient(to bottom, #72c8fa, #c4eafb, #e0f8ce, #90d470); color: #1a4a5e; min-height: 100vh; display: flex; flex-direction: column; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.8); display: flex; justify-content: space-between; padding: 15px 50px; z-index: 1000; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #0078d7; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { text-decoration: none; color: #005a9e; font-weight: 600; padding: 8px 16px; border-radius: 20px; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { background: white; color: #0078d7; }
+        main { flex: 1; margin-top: 80px; padding: 40px; text-align: center; }
+        h1 { color: #005a9e; margin-bottom: 30px; font-size: 2.5rem; text-shadow: 2px 2px white; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .member-card { background: rgba(255,255,255,0.5); backdrop-filter: blur(10px); border: 1px solid white; border-radius: 20px; padding: 25px; transition: 0.4s; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .member-card:hover { transform: translateY(-10px); box-shadow: 0 15px 25px rgba(0,120,215,0.2); background: rgba(255,255,255,0.8); }
+        .photo-placeholder { width: 120px; height: 120px; background: linear-gradient(135deg, #60b6ff, #00c853); border-radius: 50%; margin: 0 auto 15px; border: 4px solid white; box-shadow: inset 0 0 10px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }
+        .role { color: #0078d7; font-weight: bold; margin: 10px 0; }
+        footer { text-align: center; padding: 20px; background: rgba(255,255,255,0.5); font-weight: bold; color: #005a9e; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Kelompok 3</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="galleries.html">Galleries</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Meet Our Team</h1>
+        <div class="team-grid">
+            <div class="member-card">
+                <div class="photo-placeholder">Foto 1</div>
+                <h3>Anggota Satu</h3>
+                <p class="role">Project Manager</p>
+                <p>Mengatur alur kerja tim dan memastikan proyek selesai tepat waktu.</p>
+            </div>
+            <div class="member-card">
+                <div class="photo-placeholder">Foto 2</div>
+                <h3>Anggota Dua</h3>
+                <p class="role">UI/UX Designer</p>
+                <p>Merancang antarmuka Frutiger Aero yang estetis dan interaktif.</p>
+            </div>
+            <div class="member-card">
+                <div class="photo-placeholder">Foto 3</div>
+                <h3>Anggota Tiga</h3>
+                <p class="role">Frontend Developer</p>
+                <p>Mengubah desain menjadi kode yang responsif dan mulus.</p>
+            </div>
+            <div class="member-card">
+                <div class="photo-placeholder">Foto 4</div>
+                <h3>Anggota Empat</h3>
+                <p class="role">Backend Developer</p>
+                <p>Menangani basis data dan logika server yang kompleks.</p>
+            </div>
+            <div class="member-card">
+                <div class="photo-placeholder">Foto 5</div>
+                <h3>Anggota Lima</h3>
+                <p class="role">QA Tester</p>
+                <p>Memastikan tidak ada bug dan website berjalan sempurna.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>&copy; 2026 Kelompok 3 | Infor 4</footer>
+</body>
+</html>
