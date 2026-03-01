@@ -6,44 +6,53 @@
     <title>Galleries | Kelompok 3</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background: linear-gradient(to bottom, #72c8fa, #c4eafb, #e0f8ce, #90d470); color: #1a4a5e; min-height: 100vh; display: flex; flex-direction: column; }
-        nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.8); display: flex; justify-content: space-between; padding: 15px 50px; z-index: 1000; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: #0078d7; }
+        body { background: linear-gradient(to bottom, #72c8fa, #90d470); color: #1a4a5e; min-height: 100vh; display: flex; flex-direction: column; text-align: center; }
+        nav { position: fixed; width: 100%; background: rgba(255,255,255,0.6); backdrop-filter: blur(10px); display: flex; justify-content: space-between; padding: 15px 50px; z-index: 10; border-bottom: 1px solid white; }
         .nav-links { display: flex; gap: 20px; list-style: none; }
         .nav-links a { text-decoration: none; color: #005a9e; font-weight: 600; padding: 8px 16px; border-radius: 20px; transition: 0.3s; }
-        .nav-links a:hover, .nav-links a.active { background: white; color: #0078d7; }
-        main { flex: 1; margin-top: 80px; padding: 40px; text-align: center; }
-        h1 { color: #005a9e; margin-bottom: 30px; font-size: 2.5rem; text-shadow: 2px 2px white; }
+        .nav-links a:hover, .active { background: white; color: #0078d7; }
+        
+        main { flex: 1; margin-top: 100px; padding: 20px; }
+        h1 { color: #005a9e; margin-bottom: 30px; text-shadow: 2px 2px white; }
+        
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; max-width: 1000px; margin: 0 auto; }
-        .media-box { background: rgba(255,255,255,0.3); border: 2px solid white; border-radius: 10px; height: 200px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #005a9e; backdrop-filter: blur(5px); transition: 0.3s; cursor: pointer; }
-        .media-box:hover { background: rgba(255,255,255,0.7); transform: scale(1.05); }
-        .video-box { background: linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); }
-        footer { text-align: center; padding: 20px; background: rgba(255,255,255,0.5); font-weight: bold; color: #005a9e; }
+        
+        .media-box { 
+            position: relative; height: 200px; border-radius: 15px; overflow: hidden; 
+            display: flex; align-items: center; justify-content: center; 
+            border: 2px solid white; transition: 0.3s; cursor: pointer;
+        }
+        .media-box img { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+        .media-text { position: relative; z-index: 2; background: rgba(255,255,255,0.8); padding: 5px 15px; border-radius: 10px; font-weight: bold; color: #005a9e; }
+        
+        .media-box:hover { transform: scale(1.03); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .video-box { border-color: #ff9a9e; }
+        footer { padding: 20px; font-weight: bold; color: #005a9e; }
     </style>
 </head>
 <body>
     <nav>
-        <div class="logo">Kelompok 3</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="galleries.html" class="active">Galleries</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
+        <div style="font-size:1.5rem; font-weight:bold; color:#0078d7;">Kelompok 3</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="galleries.html" class="active">Galleries</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </nav>
 
     <main>
         <h1>Aktivitas Kami</h1>
         <div class="gallery-grid">
-            <div class="media-box">[Foto] Meeting Awal</div>
-            <div class="media-box">[Foto] Presentasi</div>
-            <div class="media-box">[Foto] Kerja Kelompok</div>
-            <div class="media-box video-box">[Video] Demo Aplikasi</div>
-            <div class="media-box video-box">[Video] Behind the Scene</div>
-            <div class="media-box">[Foto] Makan Siang Bareng</div>
+            <div class="media-box"><img src="https://googleusercontent.com/d/"><div class="media-text">Meeting Awal</div></div>
+            <div class="media-box"><img src="https://googleusercontent.com/d/"><div class="media-text">Presentasi</div></div>
+            <div class="media-box"><img src="https://googleusercontent.com/d/"><div class="media-text">Kerja Kelompok</div></div>
+            <div class="media-box video-box"><img src="https://googleusercontent.com/d/"><div class="media-text">[V] Demo</div></div>
+            <div class="media-box video-box"><img src="https://googleusercontent.com/d/"><div class="media-text">[V] BTS</div></div>
+            <div class="media-box"><img src="https://googleusercontent.com/d/"><div class="media-text">Makan Bareng</div></div>
         </div>
     </main>
-    <footer>&copy; 2026 Kelompok 3 | Infor 4</footer>
+    <footer>© 2026 Kelompok 3 | Infor 4</footer>
 </body>
 </html>
